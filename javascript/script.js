@@ -34,9 +34,7 @@ function fillSquare(current) {
     current.style.backgroundColor = fillColor;
 }
 
-function randomRGB() {
-
-}
+function randomRGB() {}
 
 drawGrid();
 
