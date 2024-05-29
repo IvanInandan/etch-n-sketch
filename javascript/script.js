@@ -2,10 +2,11 @@ const GRID_HEIGHT = 960;
 const GRID_WIDTH = 960;
 
 function drawGrid(dimension = 16) {
+    const grid = document.querySelector(".grid");
     grid.setAttribute("style", `height: ${GRID_HEIGHT}px; width: ${GRID_WIDTH}px`);
 
-    const SQUARE_HEIGHT = 60;
-    const SQUARE_WIDTH = 60;
+    const SQUARE_HEIGHT = GRID_HEIGHT / dimension;
+    const SQUARE_WIDTH = GRID_WIDTH / dimension;
 
     for (let i = 0; i < dimension; i++) {
         let row = document.createElement("div");
@@ -20,5 +21,5 @@ function drawGrid(dimension = 16) {
     }
 }
 
-const grid = document.querySelector(".grid");
 drawGrid();
+
