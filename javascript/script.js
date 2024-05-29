@@ -31,10 +31,17 @@ function drawGrid(dimension = 16) {
 
 function fillSquare(current) {
     let fillColor = randomRGB();
+    console.log(fillColor);
     current.style.backgroundColor = fillColor;
 }
 
-function randomRGB() {}
+function randomRGB() {
+    let o = Math.round
+    let r = Math.random 
+    let s = 255;
+    
+    return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
+}
 
 drawGrid();
 
