@@ -35,8 +35,8 @@ function fillSquare(current) {
 
 drawGrid();
 
-const sizeBtn = document.querySelector("#getSize")
-sizeBtn.addEventListener("click", () => {
+const changeSize = document.querySelector("#gridSize");
+changeSize.addEventListener("input", () => {
     const currentGrid = document.querySelector(".grid");
     currentGrid.replaceChildren();
 
