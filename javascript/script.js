@@ -21,5 +21,16 @@ function drawGrid(dimension = 16) {
     }
 }
 
+function fillSquare(current) {
+    current.style.backgroundColor = "black";
+}
+
 drawGrid();
 
+let hoverSquare = document.querySelectorAll(".square");
+hoverSquare.forEach(square => {
+    square.addEventListener("mouseover", (e) => {
+        const current = e.target;
+        fillSquare(current)
+    });
+})
