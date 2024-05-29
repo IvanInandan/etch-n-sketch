@@ -30,7 +30,12 @@ function drawGrid(dimension = 16) {
 }
 
 function fillSquare(current) {
-    current.style.backgroundColor = "black";
+    let fillColor = randomRGB();
+    current.style.backgroundColor = fillColor;
+}
+
+function randomRGB() {
+
 }
 
 drawGrid();
