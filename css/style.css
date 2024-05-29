@@ -1,0 +1,18 @@
+*, *::before, *::after {
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid {
+    border: 2px solid red;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.square {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
