@@ -19,6 +19,14 @@ function drawGrid(dimension = 16) {
         }
         grid.append(row);
     }
+
+    let hoverSquare = document.querySelectorAll(".square");
+    hoverSquare.forEach(square => {
+        square.addEventListener("mouseover", (e) => {
+            const current = e.target;
+            fillSquare(current)
+        });
+    })
 }
 
 function fillSquare(current) {
@@ -27,10 +35,11 @@ function fillSquare(current) {
 
 drawGrid();
 
-let hoverSquare = document.querySelectorAll(".square");
-hoverSquare.forEach(square => {
-    square.addEventListener("mouseover", (e) => {
-        const current = e.target;
-        fillSquare(current)
-    });
+const sizeBtn = document.querySelector("#getSize")
+sizeBtn.addEventListener("click", () => {
+    const currentGrid = document.querySelector(".grid");
+    currentGrid.replaceChildren();
+
+    const gridSize = document.querySelector("#gridSize").value;
+    drawGrid(gridSize);
 })
