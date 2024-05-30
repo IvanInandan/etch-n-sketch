@@ -24,15 +24,23 @@ function drawGrid(dimension = 16) {
     hoverSquare.forEach(square => {
         square.addEventListener("mouseover", (e) => {
             const current = e.target;
-            fillSquare(current)
+            fillSquare(current);
+            darkenSquare(current);
         });
     })
 }
 
 function fillSquare(current) {
     let fillColor = randomRGB();
-    console.log(fillColor);
     current.style.backgroundColor = fillColor;
+}
+
+function darkenSquare(current) {
+    let opacity = Number(current.style.opacity);
+    if (opacity < 1.0) {
+        opacity += 0.1;
+        current.style.opacity = opacity;
+    }
 }
 
 function randomRGB() {
